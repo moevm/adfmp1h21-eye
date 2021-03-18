@@ -15,6 +15,7 @@ class Records : AppCompatActivity() {
 
         button2.setOnClickListener {
             val menu = Intent(this, MainActivity::class.java)
+            menu.putExtra("name", name.text)
             startActivity(menu)
         }
 
