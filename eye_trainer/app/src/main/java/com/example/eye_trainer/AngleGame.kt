@@ -16,8 +16,8 @@ class AngleGame : AppCompatActivity() {
 
 
         button.setOnClickListener {
-            val rec = Intent(this, Records::class.java)
-            rec.putExtra("name", intent.getStringExtra("name"))
+            val next = Intent(this, ScaleGame::class.java)
+            next.putExtra("name", intent.getStringExtra("name"))
             val answer = answer.text.toString().toDouble()
             var alfa = canvasView.alfa*180/Math.PI
 
@@ -29,9 +29,9 @@ class AngleGame : AppCompatActivity() {
                 score = 100.0
             }
 
-            rec.putExtra("score", "${score.roundToInt()}"+"%"+" Your=${answer.toInt()}/Real=${alfa.toInt()}")
+            next.putExtra("scoreAngle", "${score.roundToInt()}"+"%"+" Your=${answer.toInt()}/Real=${alfa.toInt()}")
 
-            startActivity(rec)
+            startActivity(next)
         }
     }
 }

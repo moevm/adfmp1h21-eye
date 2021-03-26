@@ -22,7 +22,8 @@ class MainActivity : AppCompatActivity() {
         records.setOnClickListener {
             val myintent = Intent(this, Records::class.java)
             myintent.putExtra("name", intent.getStringExtra("name"))
-            myintent.putExtra("score", intent.getStringExtra("score"))
+            myintent.putExtra("scoreAngle", intent.getStringExtra("scoreAngle"))
+            myintent.putExtra("scoreScale", intent.getStringExtra("scoreScale"))
             startActivity(myintent)
         }
     }

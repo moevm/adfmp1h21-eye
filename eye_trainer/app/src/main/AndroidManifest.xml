@@ -9,7 +9,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Eye_trainer">
-        <activity android:name=".CanvasView"></activity>
+        <activity android:name=".ScaleGame"></activity>
+        <activity android:name=".CanvasViewScale" />
+        <activity android:name=".CanvasView" />
         <activity android:name=".Records" />
         <activity android:name=".AngleGame" />
         <activity android:name=".EnterName" />
