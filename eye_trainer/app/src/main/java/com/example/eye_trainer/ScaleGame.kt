@@ -17,7 +17,7 @@ class ScaleGame : AppCompatActivity() {
 
             rec.putExtra("name", intent.getStringExtra("name"))
             rec.putExtra("scoreAngle", intent.getStringExtra("scoreAngle"))
-            val scale = canvasView.scale
+            val scale = canvasViewScale.scale
             val answer = answer.text.toString().toDouble()
             var score = 100*answer/scale
             if (score > 100){

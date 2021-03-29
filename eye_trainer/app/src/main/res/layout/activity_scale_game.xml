@@ -41,7 +41,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.example.eye_trainer.CanvasViewScale
-        android:id="@+id/canvasView"
+        android:id="@+id/canvasViewScale"
         android:layout_width="205dp"
         android:layout_height="174dp"
         android:background="@color/white"
