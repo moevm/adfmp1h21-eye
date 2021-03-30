@@ -13,11 +13,11 @@ jobs:
       with:
         java-version: 1.8
     - name: Grant execute permission for gradlew
-      run: chmod +x eye_trainer/gradlew
+      run: chmod +x gradlew
     - name: Build with Gradle
-      run: ./eye_trainer/gradlew build
+      run: .//gradlew build
     - name: Run unit tests
-      run: ./eye_trainer/gradlew test
+      run: ./gradlew test
     - name: Android Test Report
       uses: asadmansr/android-test-report-action@v1.2.0
       if: ${{ always() }} # IMPORTANT: run Android Test Report regardless
