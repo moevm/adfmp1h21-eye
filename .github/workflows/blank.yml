@@ -17,9 +17,9 @@ jobs:
         run: chmod +x eye_trainer/gradlew
       # Execute unit tests
       - name: Build with Gradle
-        run: ./gradlew build
+        run: ./eye_trainer/gradlew build
       - name: Run unit tests
-        run: ./gradlew test
+        run: ./eye_trainer/gradlew test
       - name: Android Test Report
         uses: asadmansr/android-test-report-action@v1.2.0
         if: ${{ always() }} # IMPORTANT: run Android Test Report regardless
