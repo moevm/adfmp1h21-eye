@@ -24,6 +24,7 @@ class CanvasView @JvmOverloads constructor(context: Context,
     fun calculate(){
         this.alfa = Random.nextDouble(0.01, Math.PI)
 
+
         if (this.alfa >= 0.01 && this.alfa <= Math.PI/4){
             this.pointY = -100 * tan(this.alfa.toFloat())
             this.pointX = width

@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:layout_marginBottom="38dp"
         android:ems="10"
-        android:hint="Ответ"
+        android:hint="1 к ..."
         android:inputType="textPersonName"
         app:layout_constraintBottom_toTopOf="@+id/button"
         app:layout_constraintEnd_toEndOf="parent"
@@ -21,10 +21,11 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="318dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="38dp"
-        android:text="Определи масштаб"
+        android:gravity="center"
+        android:text="Отношение верхней линии к нижней?"
         android:textSize="30sp"
         app:layout_constraintEnd_toStartOf="@+id/textView2"
         app:layout_constraintStart_toStartOf="@+id/textView2"

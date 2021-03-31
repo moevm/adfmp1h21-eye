@@ -19,7 +19,9 @@ class CanvasViewScale @JvmOverloads constructor(context: Context,
     var scale: Float = 0.0F
     var flag = 0
     fun calculate(){
-        this.scale = Random.nextDouble(0.5, 5.0).toFloat()
+        this.scale = Random.nextInt(2,20).toFloat()
+        this.scale = scale/4
+
     }
 
     override fun onDraw(canvas: Canvas?) {
