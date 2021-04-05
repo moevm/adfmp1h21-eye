@@ -10,23 +10,33 @@ class Records : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_records)
 
-        name.text = intent.getStringExtra("name")
-        scoreAngle.text = intent.getStringExtra("scoreAngle")
-        scoreScale.text = intent.getStringExtra("scoreScale")
+        var db = DataBaseHandler(this)
+        val score = (intent.getStringExtra("scoreAngle")?.toInt()?.plus(intent.getStringExtra("scoreScale")?.toInt()!!))?.div(2)
+        if (score != null) {
+            db.updateData(intent.getStringExtra("name").toString(), score.toInt())
+        }
 
+        var data = db.readData()
+        for (i in 0..data.size-1)
+            name.append(data.get(i).name + " " + data.get(i).score + "\n")
+
+
+        //name.text = intent.getStringExtra("name")
+        //scoreAngle.text = intent.getStringExtra("scoreAngle")
+        //scoreScale.text = intent.getStringExtra("scoreScale")
+
+        delete.setOnClickListener {
+            db.deleteData()
+            name.text = ""
+        }
         button2.setOnClickListener {
             val menu = Intent(this, MainActivity::class.java)
-            menu.putExtra("name", name.text)
-            menu.putExtra("scoreAngle", scoreAngle.text)
-            menu.putExtra("scoreScale", scoreScale.text)
             startActivity(menu)
         }
 
         startAgain.setOnClickListener {
             val game = Intent(this, AngleGame::class.java)
-            game.putExtra("name", name.text)
-            game.putExtra("scoreAngle", scoreAngle.text)
-            game.putExtra("scoreScale", scoreScale.text)
+            game.putExtra("name", intent.getStringExtra("name").toString())
             startActivity(game)
         }
 

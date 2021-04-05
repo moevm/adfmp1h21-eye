@@ -29,7 +29,7 @@ class AngleGame : AppCompatActivity() {
                 score = 100.0
             }
 
-            next.putExtra("scoreAngle", "${score.roundToInt()}"+"%"+" Your=${answer.toInt()}/Real=${alfa.toInt()}")
+            next.putExtra("scoreAngle", "${score.roundToInt()}")
 
             startActivity(next)
         }

@@ -24,7 +24,7 @@ class ScaleGame : AppCompatActivity() {
                 score = 100*scale/answer
             }
             val scale2digits:Double = Math.round(scale * 100.0) / 100.0
-            rec.putExtra("scoreScale", "${score.roundToInt()}"+"%"+" Your=${answer}/Real=${scale2digits}")
+            rec.putExtra("scoreScale", "${score.roundToInt()}")
 
             startActivity(rec)
         }
