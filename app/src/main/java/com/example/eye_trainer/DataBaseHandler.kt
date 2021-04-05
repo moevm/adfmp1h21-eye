@@ -76,7 +76,7 @@ class DataBaseHandler (var context: Context): SQLiteOpenHelper(context, DATABASE
         if (check == 0){
             db.insert(TABLE_NAME, null, cv)
         }
-        Toast.makeText(context, "check = ${check}", Toast.LENGTH_SHORT).show()
+        //Toast.makeText(context, "check = ${check}", Toast.LENGTH_SHORT).show()
         result.close()
         db.close()
     }

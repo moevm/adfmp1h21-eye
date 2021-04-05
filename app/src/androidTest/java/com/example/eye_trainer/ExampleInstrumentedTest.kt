@@ -64,7 +64,7 @@ class ExampleInstrumentedTest {
         onView(withId(R.id.button)).perform(click())
         onView(withId(R.id.answer)).perform(typeText("1.0\n"))
         onView(withId(R.id.button)).perform(click())
-        onView(withId(R.id.name)).check(matches(withText("Player")))
+        onView(withId(R.id.title_record)).check(matches(withText("Рекорды")))
         //onView(withId(R.id.startAgain)).perform(click())
         //onView(withId(R.id.textView)).check(matches(isDisplayed()))
     }
