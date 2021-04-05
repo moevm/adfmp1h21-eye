@@ -43,9 +43,12 @@ class DataBaseHandler (var context: Context): SQLiteOpenHelper(context, DATABASE
         if (result.moveToFirst()){
             do {
                 var user = User()
-                user.id = result.getString(result.getColumnIndex(COL_ID)).toInt()
+                /*user.id = result.getString(result.getColumnIndex(COL_ID)).toInt()
                 user.name = result.getString(result.getColumnIndex(COL_NAME))
-                user.score = result.getString(result.getColumnIndex(COL_SCORE)).toInt()
+                user.score = result.getString(result.getColumnIndex(COL_SCORE)).toInt()*/
+                user.id = result.getString(0).toInt()
+                user.name = result.getString(1)
+                user.score = result.getString(2).toInt()
                 list.add(user)
             }while (result.moveToNext())
         }
