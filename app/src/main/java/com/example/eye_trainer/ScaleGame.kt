@@ -13,20 +13,20 @@ class ScaleGame : AppCompatActivity() {
 
         button.setOnClickListener {
 
-            val rec = Intent(this, Records::class.java)
+            val next = Intent(this, SquareGame::class.java)
 
-            rec.putExtra("name", intent.getStringExtra("name"))
-            rec.putExtra("scoreAngle", intent.getStringExtra("scoreAngle"))
+            next.putExtra("name", intent.getStringExtra("name"))
+            next.putExtra("scoreAngle", intent.getStringExtra("scoreAngle"))
             val scale = canvasViewScale.scale
             val answer = answer.text.toString().toDouble()
             var score = 100*answer/scale
             if (score > 100){
                 score = 100*scale/answer
             }
-            val scale2digits:Double = Math.round(scale * 100.0) / 100.0
-            rec.putExtra("scoreScale", "${score.roundToInt()}")
 
-            startActivity(rec)
+            next.putExtra("scoreScale", "${score.roundToInt()}")
+
+            startActivity(next)
         }
     }
 }
