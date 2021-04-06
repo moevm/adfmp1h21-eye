@@ -11,7 +11,7 @@ class Records : AppCompatActivity() {
         setContentView(R.layout.activity_records)
 
         var db = DataBaseHandler(this)
-        val score = (intent.getStringExtra("scoreAngle")?.toInt()?.plus(intent.getStringExtra("scoreScale")?.toInt()!!))?.div(2)
+        val score = (intent.getStringExtra("scoreAngle")?.toInt()?.plus(intent.getStringExtra("scoreScale")?.toInt()!!))?.plus(intent.getStringExtra("scoreSquare")?.toInt()!!)?.div(3)
         if (score != null) {
             db.updateData(intent.getStringExtra("name").toString(), score.toInt())
         }
